@@ -1,3 +1,5 @@
+--Create a clothing store database
+
 CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, item TEXT, color TEXT, brand TEXT, size TEXT, price INTEGER);
 
 INSERT INTO clothing_store VALUES
@@ -17,7 +19,11 @@ INSERT INTO clothing_store VALUES
 (14, "pants", "blue", "slacks", "large", 20.99),
 (15, "pants", "black", "slacks", "large", 25.99)
 ;
+
+--display the database of blue items, ordered by size in descending order
 SELECT * FROM clothing_store;
 SELECT * FROM clothing_store WHERE color IN ("blue") ORDER BY size desc;
+
+--what is the total price of blue items in the store?
 SELECT SUM(price) FROM clothing_store WHERE color IN ("blue");
 
