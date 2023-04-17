@@ -1,0 +1,23 @@
+CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, item TEXT, color TEXT, brand TEXT, size TEXT, price INTEGER);
+
+INSERT INTO clothing_store VALUES
+(1, "shirt", "blue", "polo", "small", 10.99),
+(2, "shirt", "red", "H&M", "small", 12.99),
+(3, "shirt", "blue", "polo", "medium", 10.99),
+(4, "shirt", "red", "H&M", "medium", 12.99),
+(5, "shirt", "yellow", "polo", "small", 9.99), 
+(6, "shirt", "yellow", "polo", "medium", 9.99),
+(7, "shirt", "yellow", "polo", "large", 9.99),
+(8, "shirt","blue", "polo", "large", 10.99),
+(9, "shirt","red", "H&M", "large", 12.99),
+(10, "pants", "blue", "jeans", "small", 20.99),
+(11, "pants","black", "slacks", "small", 25.99), 
+(12, "pants","blue", "jeans", "medium", 20.99), 
+(13, "pants","black", "slacks", "medium", 25.99),
+(14, "pants", "blue", "slacks", "large", 20.99),
+(15, "pants", "black", "slacks", "large", 25.99)
+;
+SELECT * FROM clothing_store;
+SELECT * FROM clothing_store WHERE color IN ("blue") ORDER BY size desc;
+SELECT SUM(price) FROM clothing_store WHERE color IN ("blue");
+
